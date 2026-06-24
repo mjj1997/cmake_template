@@ -37,7 +37,13 @@ function(myproject_setup_dependencies)
   endif()
 
   if(NOT TARGET tools::tools)
-    cpmaddpackage("gh:lefticus/tools#main")
+    cpmaddpackage(
+      NAME
+      tools
+      GITHUB_REPOSITORY
+      "lefticus/tools"
+      GIT_TAG
+      "main")
   endif()
 
 endfunction()
